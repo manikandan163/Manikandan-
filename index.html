@@ -1,20 +1,99 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Manikandan Website</title>
-</head>
-<body style="background:black; color:white; text-align:center;">
+    <title>Manikandan | Portfolio</title>
 
-    <h1>Manikandan 🚀</h1>
-    <p>This is my first live website</p>
-
-    <button onclick="msg()">Click Me</button>
-
-    <script>
-        function msg() {
-            alert("Welcome to my website 😎");
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: linear-gradient(135deg, #000000, #1f1f1f);
+            color: white;
         }
-    </script>
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background: black;
+            font-size: 24px;
+            color: cyan;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        img {
+            width: 150px;
+            border-radius: 50%;
+            border: 3px solid cyan;
+        }
+
+        h1 {
+            margin-top: 15px;
+            font-size: 32px;
+        }
+
+        p {
+            color: lightgray;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: cyan;
+            color: black;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .card {
+            background: #111;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    Manikandan 🚀
+</header>
+
+<div class="container">
+    <img src="https://via.placeholder.com/150">
+    <h1>Hi, I'm Manikandan</h1>
+    <p>Student | Future Web Developer</p>
+
+    <a href="#" class="btn">Instagram</a>
+    <a href="#" class="btn">Contact</a>
+</div>
+
+<div class="section">
+    <h2>My Skills</h2>
+
+    <div class="card">HTML</div>
+    <div class="card">CSS</div>
+    <div class="card">Basic Coding</div>
+</div>
+
+<div class="section">
+    <h2>About Me</h2>
+    <p>I am a student learning web development and technology. This is my first website 🚀</p>
+</div>
 
 </body>
 </html>
