@@ -2,98 +2,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Manikandan | Portfolio</title>
+    <title>Manikandan | Pro Site</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial;
-            background: linear-gradient(135deg, #000000, #1f1f1f);
+            background: linear-gradient(135deg, #000000, #0f2027);
             color: white;
-        }
-
-        header {
-            padding: 20px;
             text-align: center;
-            background: black;
-            font-size: 24px;
-            color: cyan;
-        }
-
-        .container {
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        img {
-            width: 150px;
-            border-radius: 50%;
-            border: 3px solid cyan;
         }
 
         h1 {
-            margin-top: 15px;
-            font-size: 32px;
+            margin-top: 40px;
+            color: cyan;
         }
 
-        p {
-            color: lightgray;
-        }
-
-        .btn {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            background: cyan;
-            color: black;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .section {
-            padding: 40px;
-            text-align: center;
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
         }
 
         .card {
             background: #111;
-            margin: 10px;
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
             width: 200px;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            background: cyan;
+            color: black;
+        }
+
+        .section {
+            display: none;
+            padding: 40px;
+            animation: fade 0.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        #home {
+            display: block;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: cyan;
+            border-radius: 20px;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    Manikandan 🚀
-</header>
+<h1>Manikandan 🚀</h1>
 
-<div class="container">
-    <img src="https://via.placeholder.com/150">
-    <h1>Hi, I'm Manikandan</h1>
-    <p>Student | Future Web Developer</p>
-
-    <a href="#" class="btn">Instagram</a>
-    <a href="#" class="btn">Contact</a>
+<div class="cards">
+    <div class="card" onclick="show('home')">🏠 Home</div>
+    <div class="card" onclick="show('about')">👤 About</div>
+    <div class="card" onclick="show('contact')">📞 Contact</div>
 </div>
 
-<div class="section">
-    <h2>My Skills</h2>
-
-    <div class="card">HTML</div>
-    <div class="card">CSS</div>
-    <div class="card">Basic Coding</div>
+<div id="home" class="section">
+    <h2>Welcome</h2>
+    <p>This is my modern interactive website 🔥</p>
 </div>
 
-<div class="section">
+<div id="about" class="section">
     <h2>About Me</h2>
-    <p>I am a student learning web development and technology. This is my first website 🚀</p>
+    <p>I am Manikandan, learning web development and creating cool designs.</p>
 </div>
+
+<div id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: yourname@gmail.com</p>
+</div>
+
+<script>
+function show(id) {
+    let sections = document.querySelectorAll('.section');
+    sections.forEach(s => s.style.display = 'none');
+
+    document.getElementById(id).style.display = 'block';
+}
+</script>
 
 </body>
 </html>
