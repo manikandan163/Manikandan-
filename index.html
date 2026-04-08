@@ -1,110 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Technology Awareness</title>
+    <title>Champion Boxer</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial;
-            background: linear-gradient(135deg, #000000, #1f1f1f);
+            background: linear-gradient(to right, #000000, #330000);
             color: white;
             text-align: center;
         }
 
-        h1 {
-            color: cyan;
-            margin-top: 20px;
+        header {
+            padding: 20px;
+            font-size: 30px;
+            color: red;
         }
 
-        .menu {
-            margin: 20px;
-        }
-
-        .menu button {
-            margin: 5px;
-            padding: 10px 15px;
-            background: cyan;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
+        img {
+            width: 200px;
+            border-radius: 10px;
+            border: 3px solid red;
         }
 
         .section {
-            display: none;
             padding: 30px;
         }
 
-        #home {
-            display: block;
-        }
-
-        ul {
-            list-style: none;
+        .btn {
+            padding: 10px 20px;
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
 
-<h1>Technology Awareness 🌐</h1>
+<header>🥊 Champion Boxer 🥊</header>
 
-<div class="menu">
-    <button onclick="show('home')">Home</button>
-    <button onclick="show('about')">About</button>
-    <button onclick="show('uses')">Uses</button>
-    <button onclick="show('adv')">Advantages</button>
-    <button onclick="show('dis')">Disadvantages</button>
+<div class="section">
+    <img src="boxer.jpg">
+    <h1>Strong. Fearless. Unstoppable.</h1>
+    <p>A passionate boxer with strength, dedication, and determination.</p>
 </div>
 
-<div id="home" class="section">
-    <h2>Welcome</h2>
-    <p>Technology is changing the world rapidly. It plays an important role in our daily life.</p>
+<div class="section">
+    <h2>About</h2>
+    <p>This boxer trains hard every day and aims to achieve greatness in the ring.</p>
 </div>
 
-<div id="about" class="section">
-    <h2>About Technology</h2>
-    <p>Technology is the application of scientific knowledge to create tools and systems that solve problems.</p>
+<div class="section">
+    <h2>Achievements</h2>
+    <p>🏆 District Champion<br>
+       🥇 State Level Participant<br>
+       💪 Daily Training & Fitness</p>
 </div>
 
-<div id="uses" class="section">
-    <h2>Uses of Technology</h2>
-    <ul>
-        <li>Communication (mobile, internet)</li>
-        <li>Education (online learning)</li>
-        <li>Healthcare (modern machines)</li>
-        <li>Business (online shopping)</li>
-    </ul>
+<div class="section">
+    <button class="btn" onclick="alert('Keep fighting! 💥')">Motivate</button>
 </div>
-
-<div id="adv" class="section">
-    <h2>Advantages</h2>
-    <ul>
-        <li>Saves time</li>
-        <li>Easy information access</li>
-        <li>Improves communication</li>
-        <li>Supports education</li>
-    </ul>
-</div>
-
-<div id="dis" class="section">
-    <h2>Disadvantages</h2>
-    <ul>
-        <li>Mobile addiction</li>
-        <li>Privacy issues</li>
-        <li>Cybercrime</li>
-        <li>Health problems</li>
-    </ul>
-</div>
-
-<script>
-function show(id) {
-    let sections = document.querySelectorAll('.section');
-    sections.forEach(s => s.style.display = 'none');
-
-    document.getElementById(id).style.display = 'block';
-}
-</script>
 
 </body>
 </html>
