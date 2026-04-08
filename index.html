@@ -7,34 +7,63 @@
         body {
             margin: 0;
             font-family: Arial;
-            background: linear-gradient(to right, #000000, #330000);
+            background: radial-gradient(circle, #000000, #330000);
             color: white;
             text-align: center;
         }
 
         header {
             padding: 20px;
-            font-size: 30px;
+            font-size: 32px;
             color: red;
+            text-shadow: 0 0 15px red;
         }
 
         img {
             width: 200px;
-            border-radius: 10px;
+            border-radius: 15px;
             border: 3px solid red;
+            box-shadow: 0 0 20px red;
+            margin-top: 20px;
         }
 
-        .section {
-            padding: 30px;
+        .card {
+            background: #111;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px red;
         }
 
         .btn {
-            padding: 10px 20px;
+            padding: 12px 25px;
             background: red;
-            color: white;
             border: none;
-            border-radius: 20px;
+            border-radius: 25px;
+            color: white;
+            font-size: 16px;
             cursor: pointer;
+            box-shadow: 0 0 10px red;
+        }
+
+        .btn:hover {
+            background: darkred;
+        }
+
+        @keyframes punch {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .punch {
+            animation: punch 0.5s;
         }
     </style>
 </head>
@@ -43,27 +72,39 @@
 
 <header>🥊 Champion Boxer 🥊</header>
 
-<div class="section">
-    <img src="boxer.jpg">
-    <h1>Strong. Fearless. Unstoppable.</h1>
-    <p>A passionate boxer with strength, dedication, and determination.</p>
+<img src="boxer.jpg" id="photo">
+
+<div class="card">
+    <h2>Strong. Fearless. Unstoppable.</h2>
+    <p>A passionate boxer who trains hard and fights with determination.</p>
 </div>
 
-<div class="section">
+<div class="card">
     <h2>About</h2>
-    <p>This boxer trains hard every day and aims to achieve greatness in the ring.</p>
+    <p>This boxer is dedicated to fitness, discipline, and achieving success in the ring.</p>
 </div>
 
-<div class="section">
+<div class="card">
     <h2>Achievements</h2>
     <p>🏆 District Champion<br>
        🥇 State Level Participant<br>
-       💪 Daily Training & Fitness</p>
+       💪 Daily Training</p>
 </div>
 
-<div class="section">
-    <button class="btn" onclick="alert('Keep fighting! 💥')">Motivate</button>
-</div>
+<button class="btn" onclick="punchEffect()">💥 Motivate</button>
+
+<script>
+function punchEffect() {
+    let img = document.getElementById("photo");
+    img.classList.add("punch");
+
+    setTimeout(() => {
+        img.classList.remove("punch");
+    }, 500);
+
+    alert("Keep fighting! You are a champion 🥊🔥");
+}
+</script>
 
 </body>
 </html>
