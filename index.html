@@ -1,94 +1,100 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Manikandan | Pro Site</title>
+    <title>Technology Awareness</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial;
-            background: linear-gradient(135deg, #000000, #0f2027);
+            background: linear-gradient(135deg, #000000, #1f1f1f);
             color: white;
             text-align: center;
         }
 
         h1 {
-            margin-top: 40px;
             color: cyan;
+            margin-top: 20px;
         }
 
-        .cards {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 40px;
+        .menu {
+            margin: 20px;
         }
 
-        .card {
-            background: #111;
-            width: 200px;
-            margin: 15px;
-            padding: 20px;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: scale(1.1);
+        .menu button {
+            margin: 5px;
+            padding: 10px 15px;
             background: cyan;
-            color: black;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
         }
 
         .section {
             display: none;
-            padding: 40px;
-            animation: fade 0.5s;
-        }
-
-        @keyframes fade {
-            from {opacity: 0;}
-            to {opacity: 1;}
+            padding: 30px;
         }
 
         #home {
             display: block;
         }
 
-        button {
-            padding: 10px 20px;
-            border: none;
-            background: cyan;
-            border-radius: 20px;
-            cursor: pointer;
+        ul {
+            list-style: none;
         }
     </style>
 </head>
 
 <body>
 
-<h1>Manikandan 🚀</h1>
+<h1>Technology Awareness 🌐</h1>
 
-<div class="cards">
-    <div class="card" onclick="show('home')">🏠 Home</div>
-    <div class="card" onclick="show('about')">👤 About</div>
-    <div class="card" onclick="show('contact')">📞 Contact</div>
+<div class="menu">
+    <button onclick="show('home')">Home</button>
+    <button onclick="show('about')">About</button>
+    <button onclick="show('uses')">Uses</button>
+    <button onclick="show('adv')">Advantages</button>
+    <button onclick="show('dis')">Disadvantages</button>
 </div>
 
 <div id="home" class="section">
     <h2>Welcome</h2>
-    <p>This is my modern interactive website 🔥</p>
+    <p>Technology is changing the world rapidly. It plays an important role in our daily life.</p>
 </div>
 
 <div id="about" class="section">
-    <h2>About Me</h2>
-    <p>I am Manikandan, learning web development and creating cool designs.</p>
+    <h2>About Technology</h2>
+    <p>Technology is the application of scientific knowledge to create tools and systems that solve problems.</p>
 </div>
 
-<div id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: yourname@gmail.com</p>
+<div id="uses" class="section">
+    <h2>Uses of Technology</h2>
+    <ul>
+        <li>Communication (mobile, internet)</li>
+        <li>Education (online learning)</li>
+        <li>Healthcare (modern machines)</li>
+        <li>Business (online shopping)</li>
+    </ul>
+</div>
+
+<div id="adv" class="section">
+    <h2>Advantages</h2>
+    <ul>
+        <li>Saves time</li>
+        <li>Easy information access</li>
+        <li>Improves communication</li>
+        <li>Supports education</li>
+    </ul>
+</div>
+
+<div id="dis" class="section">
+    <h2>Disadvantages</h2>
+    <ul>
+        <li>Mobile addiction</li>
+        <li>Privacy issues</li>
+        <li>Cybercrime</li>
+        <li>Health problems</li>
+    </ul>
 </div>
 
 <script>
